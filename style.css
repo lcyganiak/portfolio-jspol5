@@ -1,0 +1,78 @@
+@charset "UTF-8";
+/* widok mobilny */
+:root {
+  --primary-color-font: rgba(10, 10, 10, 0.897);
+  --font-size: 17px;
+  --font-size-ikon: 20px
+;
+}
+
+/* text-align: center; w przypadku dodania w tagu html,
+ może spowodować różenie perturbacje w wyglądzie strony */
+html {
+  color: var(--primary-color-font);
+  font-family: 'Lato', sans-serif;
+  /* text-align: center;  */
+  font-size: var(--font-size);
+  font-weight: 400;
+  font-style: normal;
+  /*wartośc domyślna dla wszytkich przeglądarek, nie trzeba ustawiać */
+  line-height: 30px;
+  /*odstęp pomiędzy liniami tekstu*/
+}
+
+.main-header {
+  background-image: url(./img/bg-header.png);
+  background-size: cover;
+  background-position: right top;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+/* zachowanie na tabletach*/
+@media (min-width: 576px) and (max-width: 778px) {
+  .main-header {
+    display: block;
+    position: relative;
+  }
+  .main-header .main-header-h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+/* zachowanie na małych laptopach */
+@media (min-width: 779px) and (max-width: 992px) {
+  .main-header {
+    display: block;
+    position: relative;
+  }
+  .main-header .main-header-h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: red;
+  }
+}
+
+/*zachowanie na dużych ekranach */
+@media (min-width: 993px) {
+  .main-header {
+    display: block;
+    position: relative;
+  }
+  .main-header .main-header-h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+/*# sourceMappingURL=style.css.map */
